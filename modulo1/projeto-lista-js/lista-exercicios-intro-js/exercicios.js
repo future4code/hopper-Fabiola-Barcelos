@@ -43,17 +43,22 @@ console.log(anoAtual-anoDeNascimento)
 // EXERCÍCIO 03
 function calculaIMC(peso, altura) {
   // implemente sua lógica aqui
- 
-  peso: 70
-  altura: 1.65
-    console.log(peso/(altura*altura))
+   peso: 85
+  altura: 1.8
+    return peso/(altura*altura)
 }
 
 // EXERCÍCIO 04
 function imprimeInformacoesUsuario() {
   // implemente sua lógica aqui
   // "Meu nome é NOME, tenho IDADE anos, e o meu email é EMAIL."
-
+nome: "Alice"
+idade: 28
+email: "alice@gmail.com"
+const nome = prompt("Qual o seu nome?")
+const idade = prompt("Qual a sua idade?")
+const email = prompt("Qual o seu email?")
+console.log(`Meu nome é ${nome}, tenho ${idade} anos, e o meu email é ${email}.`)
 }
 
 // EXERCÍCIO 05
