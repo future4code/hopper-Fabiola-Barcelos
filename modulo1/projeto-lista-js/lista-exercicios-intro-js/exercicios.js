@@ -64,7 +64,12 @@ console.log(`Meu nome é ${nome}, tenho ${idade} anos, e o meu email é ${email}
 // EXERCÍCIO 05
 function imprimeTresCoresFavoritas() {
   // implemente sua lógica aqui
+cor1: "Azul"
+cor2: "Amarelo"
+cor3: "Vermelho"
+let coresFavoritas = prompt("Quais são as suas cores favoritas?")
 
+console.log([cor1, cor2, cor3])
 }
 
 // EXERCÍCIO 06
