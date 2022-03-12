@@ -93,31 +93,100 @@ retornaDados(outraPessoa)
 
 //3
 //a)
-const carrinho = []
+// const carrinho = []
+
 //b)
 
-const fruta1 = {
+const uva = {
 nome: "uva",
-disponível: true
+disponibilidade: true
 }
 
-const fruta2 = {
+const maca = {
 nome: "maçã",
-disponível: true
+disponibilidade: true
 }
 
-const fruta3 = {
+const mamao = {
     nome: "mamão",
-    disponível: true
+    disponibilidade: true
 }
 
 let devolveArray = (objeto) => {
     return carrinho.push(objeto)
 }
 
-devolveArray(fruta1)
+/*devolveArray(fruta1)
 devolveArray(fruta2)
 devolveArray(fruta3)
-console.log(carrinho)
+console.log(carrinho)*/
+
+let inverteDisponibilidade = (fruta) => {
+    return{...fruta, disponibilidade: !fruta.disponibilidade}
+}
+console.log(inverteDisponibilidade(uva))
+console.log(inverteDisponibilidade(inverteDisponibilidade(uva)))
 
 //DESAFIO
+//1.
+/*
+let nomeUsuario = prompt(`Qual o seu nome?`)
+let idadeUsuario = Number(prompt(`Qual a sua idade?`))
+let profissaoUsuario = prompt(`Qual a sua profissão?`)
+
+let usuario = {
+    nome: nomeUsuario,
+    idade: idadeUsuario,
+    profissão: profissaoUsuario
+
+}
+console.log(usuario)
+console.log(typeof(usuario))
+*/
+
+/*let novaPessoa = () => {
+    let pessoa = {
+        nome: prompt(`Qual o seu nome?`),
+        idade:Number(prompt(`Quantos anos você tem?`)),
+        profissão: prompt(`Qual a sua profissão?`)
+    }
+    console.log(pessoa)
+    console.log(typeof(pessoa))
+}
+novaPessoa()
+*/
+
+
+//2.
+/*let filmes = () => {
+    let primeiroFilme = {
+        título: `Shrek`, 
+        ano: 2001
+    }
+    let segundoFilme = {
+        título: `Toy Story`,
+        ano: 1995
+    }
+    console.log(`O primeiro filme foi lançado antes do segundo? ${primeiroFilme.ano < segundoFilme.ano}`)
+    console.log(`O primeiro filme foi lançado no mesmo ano do segundo? ${primeiroFilme.ano === segundoFilme.ano}`)
+
+}
+filmes()
+*/
+
+let comparaAnos = (primeiroFilme, segundoFilme) => {
+    console.log(`O primeiro filme foi lançado antes do segundo? ${primeiroFilme.ano < segundoFilme.ano}`)
+    console.log(`O primeiro filme foi lançado no mesmo ano do segundo? ${primeiroFilme.ano === segundoFilme.ano}`)
+}
+
+let shrek = {
+    título: `Shrek`,
+    ano: 2001
+}
+
+let toyStory = {
+    título: `Toy Story`,
+    ano: 1995
+}
+
+comparaAnos(shrek, toyStory)
