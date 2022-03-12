@@ -132,17 +132,42 @@ return string1.toLowerCase() === string2.toLowerCase()
 // EXERCÍCIO 13
 function checaRenovacaoRG() {
   // implemente sua lógica aqui
+anoAtual: 2020
+anoNascimento: 2000
+anoRG: 2015
+  let anoAtual = Number(prompt(`Qual o ano atual?`))
+ let anoNascimento = Number(prompt(`Em que ano você nasceu?`))
+ let anoRG = Number(prompt(`Qual o ano de emissão da sua carteira de indentidade?`))
  
+ let idade = anoAtual - anoNascimento
+ let emissaoRG = anoAtual - anoRG
+
+ let cond1 = idade <= 20 && emissaoRG >= 5
+ let cond2 = idade > 20 && idade <= 50 && emissaoRG >= 10
+ let cond3 = idade > 50 && emissaoRG >= 15
+
+
+ console.log(cond1 || cond2 || cond3)
 }
 
 // EXERCÍCIO 14
 function checaAnoBissexto(ano) {
   // implemente sua lógica aqui
+  
+ let condi1 = ano % 400 === 0
+ let condi2 = ano % 4 === 0
+ let condi3 = ano % 100 !== 0
 
+
+  return condi1 || condi2 && condi3  
 }
 
 // EXERCÍCIO 15
 function checaValidadeInscricaoLabenu() {
   // implemente sua lógica aqui
+ let idadeAluno = prompt(`Você tem mais de 18 anos? Reponda sim ou não:`)
+ let escolaridade = prompt(`Você possui ensino médio completo? Responda sim ou não:`)
+ let disponibilidade = prompt(`Você possui disponibilidade exclusiva durante os horários do curso? Responda sim ou não:`)
+ console.log(idadeAluno === `sim` && escolaridade === `sim` && disponibilidade === `sim`)
 
 }
