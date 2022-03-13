@@ -91,21 +91,25 @@ if (generoFilme.toLowerCase() === `fantasia` && valorIngresso <= 15) {
 
 
 //2. 
-let nomeUsuario = prompt(`Insira seu nome completo`)
+/*let nomeUsuario = prompt(`Insira seu nome completo`)
 let tipoJogo = prompt(`Digite IN para jogo internacional ou DO para jogo doméstico`)
 let etapaJogo = prompt(`Semi-final, decisão do terceiro lugar ou final?`)
 let categoria = prompt(`Escolha a categoria: 1, 2, 3 ou 4`)
 let quantidadeIngressos = Number(prompt(`Quantos ingressos você deseja?`))
+
 console.log(`Dados da compra:`)
 console.log(`Nome do cliente: ${nomeUsuario}`)
 
-if (tipoJogo.toLowerCase() === `internacional`) {
+
+if (tipoJogo.toLowerCase() === `in`) {
     console.log(`Tipo de jogo: internacional`)
-} else if (tipoJogo.toLocaleLowerCase() ===  `doméstico`)  {
+} else if (tipoJogo.toLocaleLowerCase() ===  `dofa`)  {
     console.log(`Tipo de jogo: nacional`)
 } else {
     console.log(`Erro! Escolha o tipo de jogo corretamente`)
    } 
+
+
 
    switch (etapaJogo.toLowerCase()) {
        case `semi-final`:
@@ -143,23 +147,48 @@ if (tipoJogo.toLowerCase() === `internacional`) {
 
     console.log(`Quantidade de ingressos: ${quantidadeIngressos}`)
     console.log(`Valores:`)
-/*let sf1 =  
+*/
 
-1320
-let sf2 = 880
-let sf3 = 550
-let sf4 = 220
-let dt1 = 660
-let dt2 = 440
-let dt3 = 330
-let dt4 = 170
-let fi1 = 1980
-let fi2 = 1320
-let fi3 = 880
-let fi4 = 330*/
+/*let nomeUsuario = prompt(`Insira seu nome completo`)
+let tipoJogo = prompt(`Digite IN para jogo internacional ou DO para jogo doméstico`)
+let etapaJogo = prompt(`Insira (SF)Semi-final, (DT) decisão do terceiro lugar ou (F) final?`)
+let categoria = prompt(`Escolha a categoria: 1, 2, 3 ou 4`)
+let quantidadeIngressos = Number(prompt(`Quantos ingressos você deseja?`))
+
+let precoIngresso
+
+switch (etapaJogo) {
+    case "SF":
+        switch (categoria) {
+            case '1':
+              precoIngresso = 1320;
+              break;
+              case `2`:
+                  precoIngresso = 880;
+                  break;
+                  case `3`:
+                      precoIngresso = 550;
+                      break;
+                      case `4`:
+                          precoIngresso = 220;
+                          break;  
+        }
+        break;
+
+    default:
+        break;
+}
+
+console.log(`Dados da compra:`)
+console.log(`Nome do cliente: ${nomeUsuario}`)
+
+*/
 
 
-if (tipoJogo === "doméstico" && etapaJogo === `disputa do terceiro lugar` && categoria === "1") {
+    
+
+
+/*if (tipoJogo === "doméstico" && etapaJogo === `disputa do terceiro lugar` && categoria === "1") {
     console.log(`Valor do ingresso: R$ 660,00`)
 } else if (tipoJogo === "doméstico" && etapaJogo === `disputa do terceiro lugar` && categoria === "2"){
     console.log(`Valor do ingresso: R$ 440,00`)
@@ -170,6 +199,113 @@ if (tipoJogo === "doméstico" && etapaJogo === `disputa do terceiro lugar` && ca
 } else{
     console.log(`Erro! Confira as informações.`)
 }
+*/
 
-let semiNacional = tipoJogo === `doméstico` && etapaJogo === `semi-final`
-console.log(semiNacional)
+const nome = prompt("Digite seu nome");
+const tipo = prompt("[IN]ternacional ou [DO]mestico");
+const etapa = prompt("Semi-final [SF], Decisão Terceiro [DT] ou Final [FI]?");
+const categoria = Number(prompt("Categoria 1, 2, 3 ou 4?"));
+const quantidade = Number(prompt("Quantidade de ingressos?"));
+
+let precoUnitario;
+
+switch (etapa) {
+   case "SF":
+     switch (categoria) {
+       case 1:
+         precoUnitario = 1320;
+         break;
+         case 2:
+         precoUnitario = 880;
+         break;
+         case 3:
+         precoUnitario = 550;
+         break;
+         case 4:
+         precoUnitario = 220;
+         break;
+         default:
+         precoUnitario = 0;
+         break;
+     }
+     break;
+   case "DT":
+     switch (categoria) {
+       case 1:
+         precoUnitario = 660;
+         break;
+         case 2:
+         precoUnitario = 440;
+         break;
+         case 3:
+         precoUnitario = 330;
+         break;
+         case 4:
+         precoUnitario = 170;
+         break;
+         default:
+         precoUnitario = 0;
+         break;
+     }
+     break;
+   case "FI":
+     switch (categoria) {
+       case 1:
+         precoUnitario = 1980;
+         break;
+         case 2:
+         precoUnitario = 1320;
+         break;
+       case 3:
+         precoUnitario = 880;
+         break;
+         case 4:
+         precoUnitario = 330;
+         break;
+         default:
+         precoUnitario = 0;
+         break;
+     }
+     break;
+   default:
+     break;
+ }
+
+ if (tipo === "IN") {
+   precoUnitario = precoUnitario * 4.1;
+ }
+
+ let textoTipo;
+ if (tipo === "DO") {
+   textoTipo = "Doméstico";
+ } else if (tipo === "IN") {
+   textoTipo = "Internacional";
+ } else {
+   textoTipo = "Erro";
+ }
+
+ let textoEtapa;
+ switch (etapa) {
+   case "SF":
+     textoEtapa = "Semi-Final";
+     break;
+   case "DT":
+     textoEtapa = "Decisão Terceiro";
+     break;
+   case "FI":
+     textoEtapa = "Final";
+     break;
+   default:
+     textoEtapa = "Erro";
+     break;
+ }
+
+// // Saídas
+ console.log("---Dados da compra---");
+ console.log("Nome do cliente:", nome);
+ console.log("Tipo do jogo:", textoTipo);
+ console.log("Etapa do Jogo:", textoEtapa);
+ console.log("Categoria:", categoria);
+ console.log("---Valores--- ");
+ console.log("Valor do Ingresso:", precoUnitario);
+ console.log("Valor Total da Compra:", precoUnitario * quantidade);
