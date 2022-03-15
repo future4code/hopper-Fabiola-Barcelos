@@ -10,3 +10,16 @@
  * 
  * 
  */
+   
+    
+console.log(`Boas vindas ao jogo de Blackjack!`)
+if(confirm(`Quer iniciar uma nova rodada?`)) {
+   
+} else {
+console.log(`O jogo acabou.`)
+   }
+
+const carta = comprarCarta()
+console.log(carta.texto)
+console.log(carta.valor)
+
