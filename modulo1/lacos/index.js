@@ -54,7 +54,7 @@ while(i < pets) {
   i ++
 }
 */
-
+/*
 //2. 
 const arrayOriginal = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
 //a. função que imprima todos os números de arrayOriginal
@@ -103,11 +103,11 @@ console.log(novoArray)
 }
 console.log(`d. array com strings`)
 adicionaString(arrayOriginal, arrayString) 
- 
+*/ 
 //e.
 
 
-
+/*
 let retornaMaximoMinimo = (array) =>{
   let valorMaximo = 0;
   let valorMinimo = Infinity;
@@ -125,3 +125,29 @@ let retornaMaximoMinimo = (array) =>{
 }
   
   retornaMaximoMinimo(arrayOriginal)
+*/
+  //DESAFIO
+  let tentativa = 1
+  let escolhaNumero = () => {
+    return Math.floor((Math.random() * 10) + 1)}
+  console.log(`Vamos jogar!`)
+
+  let chuteNumero
+  
+  
+
+    while (escolhaNumero !== chuteNumero) {
+    let chuteNumero = Number(prompt("Chute um número"))
+    console.log(`O número chutado foi ${chuteNumero}`)
+  if (escolhaNumero < chuteNumero) {
+    console.log(`Errou, seu número é maior do que deveria.`)  
+  } else if (escolhaNumero > chuteNumero) {
+    console.log(`Errou, seu número é menor.`)
+  } else {
+    console.log(`Acertou!`)
+    console.log(`O número de tentativas foi: ${tentativa} `)
+    break;
+  }
+   tentativa ++ 
+  }
+  
