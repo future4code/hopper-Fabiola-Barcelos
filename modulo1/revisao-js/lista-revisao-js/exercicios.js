@@ -25,8 +25,12 @@ function retornaArrayOrdenado(array) {
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-  
+   function filtraPares(num) {
+    return num % 2 === 0
+   }
+   return array.filter(filtraPares)
 }
+
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
