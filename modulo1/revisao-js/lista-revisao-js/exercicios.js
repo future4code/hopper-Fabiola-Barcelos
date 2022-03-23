@@ -17,8 +17,7 @@ function retornaArrayInvertido(array) {
 function retornaArrayOrdenado(array) {
  function comparaNumeros(a, b) {
   return a - b
-   
- }
+    }
     return array.sort(comparaNumeros)
 }
 
@@ -56,7 +55,12 @@ function retornaMaiorNumero(array) {
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
 
-}
+
+
+} 
+ 
+
+
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
