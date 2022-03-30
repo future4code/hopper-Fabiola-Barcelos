@@ -1,0 +1,7 @@
+1. prestar atenção para o que o código precisa fazer, o que é solicitado
+2. extrair as informações relevantes, palavras-chave
+3. pensar nas possíveis entradas e saídas do código
+4. fazer um esquema, rascunhar no papel para começar a visualizar a lógica
+5. começar a criar o código, azar se ficar feio, desde que funcione ta ok
+6. testar e testar o código
+7. refatorar - melhorar o código, deixar mais simples, com nomes compreensiveis

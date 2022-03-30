@@ -63,7 +63,8 @@ console.log(`Meu nome é ${nome}, tenho ${idade} anos, e o meu email é ${email}
 
 // EXERCÍCIO 05
 function imprimeTresCoresFavoritas() {
-  // implemente sua lógica aqui
+  // implemente sua lógica aqui 
+  < projeto-list-js
   cor1: "Azul"
   cor2: "Amarelo"
   cor3: "Vermelho"
@@ -71,7 +72,6 @@ function imprimeTresCoresFavoritas() {
   let cor2 = prompt("Digite a segunda cor favorita")
   let cor3 = prompt("Digite a terceira cor favorita")
   console.log([cor1, cor2, cor3])
-}
 
 // EXERCÍCIO 06
 function retornaStringEmMaiuscula(string) {
