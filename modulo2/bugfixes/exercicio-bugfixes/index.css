@@ -70,7 +70,7 @@ div img {
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
-    padding-top: 20px
+    padding-top: 100px
 }
 
 #container-de-descricao>ol {
@@ -103,6 +103,7 @@ div:last-child {
 
 table {
     width: 60%;
+    margin: auto;
 }
 
 td button {
