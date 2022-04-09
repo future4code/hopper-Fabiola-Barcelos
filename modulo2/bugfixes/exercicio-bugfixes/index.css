@@ -127,6 +127,12 @@ td button:hover{
     background-color: #d1ab06;
 }
 
+body input {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-width: medium;
+}
 
 body .container-do-search {
     margin-top: 20px;
