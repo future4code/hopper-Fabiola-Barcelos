@@ -108,7 +108,7 @@ table {
     width: 60%;
     margin: auto;
     text-align: center;
-    
+
 }
 
 td button {
@@ -118,6 +118,15 @@ td button {
     border-radius: 5px;
     color: black;
 }
+
+ td button:active {
+    color: white
+}
+
+td button:hover{
+    background-color: #d1ab06;
+}
+
 
 body .container-do-search {
     margin-top: 20px;
