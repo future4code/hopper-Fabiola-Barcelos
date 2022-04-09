@@ -146,13 +146,14 @@ body .container-do-search {
 
 body .container-do-search .icone {
     background-color: white;
-    height: 40px;
-    width: 40px;
-      
-         
+    height: 30px;
+    width: 30px;
+          
        
 }
-
+body .container-do-search .icone:hover{
+opacity: 0.5;
+}
 
 
 #back-button {
@@ -163,8 +164,12 @@ body .container-do-search .icone {
     border-radius: 5px;
     font-size: 10px;
     color: black;
+    text-align: center;
 }
 
 #back-button:hover {
     background-color: #635a3d
+}
+div button{
+    text-align:center;
 }
