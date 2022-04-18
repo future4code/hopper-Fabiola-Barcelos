@@ -1,54 +1,91 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body, html{
-    height:100%;
+body,
+html {
+  height: 100%;
 }
 
-/*BODY class*/
-.grid-container-pagina{
-    display:grid;
-    grid-template-rows: 8% 1fr 1fr 8%;
-    grid-template-columns: 20% 1fr 1fr 1fr 1fr;
+/*BODY*/
+body {
+  display: grid;
+  grid-template-rows: 8% 1fr 1fr 8%;
+  grid-template-columns: 20% 1fr 1fr 1fr 1fr;
+  
 }
 
-/*BODY HEADER class*/
-.cabecalho-confeitaria{
-    grid-column: 1 / span 5;
-    padding: 10px 10px 10px 10px;
-    display: flex;
-    flex-direction:row;
-    background-color: mediumvioletred;
-    align-items: center;
+/*HEADER*/
+header {
+  grid-column: 1 / span 5;
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  flex-direction: row;
+  background-color: mediumvioletred;
+  align-items: center;
 }
 
-/*BODY HEADER img bolo id*/
-#icone-bolo-padding{
-    padding: 0 10px 0 0;
+/*HEADER img bolo id*/
+#icone-bolo-padding {
+  padding: 0 10px 0 0;
 }
 
-/*BODY HEADER botão login id*/
-#button-right-corner{
-    padding: 0px 5px;
-    margin: 0px 10px 5px 10px;
-    margin-left: auto; 
-}
-/*BODY NAV MENU class*/
-.menu-confeitaria{
-    grid-column: 1;
-    grid-row: 2 / span 3;
-    background-color: #f2d0e0;
+/*HEADER botão login id*/
+#button-right-corner {
+  padding: 0px 5px;
+  margin: 0px 10px 5px 10px;
+  margin-left: auto;
 }
 
-/*BODY FOOTER*/
-.rodape-confeitaria{
-    grid-row: 4;
-    grid-column: 1 / span 5;
-    padding: 10px 10px 10px 10px;
-    background-color: mediumvioletred;
+/*NAV*/
+nav {
+  grid-column: 1;
+  grid-row: 2 / span 3;
+  background-color: #f2d0e0;
+}
+/*menu*/
+ul {
+  margin: 10px 10px 10px 10px;
+}
+/*itens do menu*/
+li{
+    margin-bottom: 15px;
     display:flex;
-    align-items: center;
-    justify-content: center;
+    align-items:center;
+}
+/*imagens em cada item do menu*/
+.space-img-item{
+    padding-right: 10px;
+}
+/*seta menu*/
+.arrow-to-the-right{
+    margin-left: auto;
+}
+
+/*MAIN*/
+main{
+    grid-row: 2 / span 2;
+    grid-column: 2 / span 3;
+    margin-top: 20px;
+    display:flex;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    
+    
+}
+
+p, h3{
+    text-align: center;
+}
+
+/*FOOTER*/
+footer {
+  grid-row: 4;
+  grid-column: 1 / span 5;
+  padding: 10px 10px 10px 10px;
+  background-color: mediumvioletred;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
