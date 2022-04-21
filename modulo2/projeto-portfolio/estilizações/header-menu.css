@@ -1,1 +1,32 @@
+/*HEADER display flex*/
+nav {
+  top: 0;
+  width: 90%;
+  position: fixed;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
 /*HEADER menu*/
+.menu {
+  width: 90%;
+  font-family: 'K2D', sans-serif;
+  font-size: 1.2rem;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0.5rem;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+/*HEADER linha embaixo do menu*/
+hr {
+  overflow: hidden;
+  border-top: 1px solid #202020;
+  opacity: 50%;
+  width: 90%;
+}
