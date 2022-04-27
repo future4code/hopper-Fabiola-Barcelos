@@ -2,25 +2,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f6f0cf;
-}
+  }
 
 @import "./estilizações/variables";
 
 html {
-  scroll-behavior: smooth ;
+  background-color: @cor-de-fundo;  
   color: @cor-da-fonte;
   font-size: 16px;
 }
 
-
 body {
-  min-height:100vh;
-  box-sizing: border-box;
-}
+  min-height: 100vh;
+  scroll-behavior: smooth;
+   }
+
 
 @import "./estilizações/header-menu";
-@import "./estilizações/body-main";
+ 
+@import "./estilizações/main.less";
+
+
 @import "./estilizações/footer";
 
 @import "./estilizações/media-query";

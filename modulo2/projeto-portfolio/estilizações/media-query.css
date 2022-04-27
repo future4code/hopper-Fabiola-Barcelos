@@ -1,5 +1,5 @@
 /*FOOTER rodapé*/
-@media (max-width: 501px) {
+@media (max-width: 566px) {
   .desktop {
     display: none;
   }
@@ -7,7 +7,7 @@
     display: block;
   }
 }
-@media (min-width: 502px) {
+@media (min-width: 567px) {
   .desktop {
     display: block;
   }
@@ -18,10 +18,10 @@
 footer {
   bottom: 0;
   width: 90%;
-  position: absolute;
+  position: static;
   margin-left: 5%;
   margin-right: 5%;
-  margin-bottom: 1rem;
+  padding-bottom: 9px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,20 +29,20 @@ footer {
   flex-wrap: wrap;
 }
 /*frase projeto*/
-p {
+p .texto-footer {
   width: 90%;
   font-family: 'Sarabun', sans-serif;
   text-align: center;
   font-size: 0.9rem;
-  margin-top: 0.5rem;
+  margin-top: 9px;
 }
 hr {
   overflow: visible;
   border-top: 1px solid #202020;
   opacity: 50%;
-  width: 90%;
+  width: 100%;
 }
-@media (max-width: 501px) {
+@media (max-width: 566px) {
   .desktop {
     display: none;
   }
@@ -50,7 +50,7 @@ hr {
     display: block;
   }
 }
-@media (min-width: 502px) {
+@media (min-width: 567px) {
   .desktop {
     display: block;
   }
