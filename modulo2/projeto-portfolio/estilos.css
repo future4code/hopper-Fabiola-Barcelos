@@ -22,11 +22,13 @@ header nav {
   position: fixed;
   margin-left: 5%;
   margin-right: 5%;
-  margin-top: 2px;
+  margin-top: 0;
+  padding-top: 2px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-items: center;
+  z-index: 1;
 }
 /*HEADER menu*/
 header nav .menu {
@@ -64,21 +66,19 @@ main {
   align-items: center;
   justify-content: center;
 }
-h5,
-h6 {
-  font-family: 'Arima Madurai', cursive;
-}
-h6 {
-  font-size: 3rem;
-  text-align: right;
-}
 h5 {
+  font-family: 'Arima Madurai', cursive;
   font-size: 3rem;
-  text-align: left;
 }
 p {
   font-family: 'Sarabun', sans-serif;
   font-size: 1rem;
+}
+a {
+  font-family: 'Sarabun', sans-serif;
+  text-decoration: none;
+  display: block;
+  color: #202020;
 }
 .inicio-flex {
   padding-top: 10px;
@@ -89,11 +89,214 @@ p {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 2rem;
+  position: relative;
+  z-index: -1;
 }
-.inicio-flex > img {
-  width: 150px;
-  height: 200px;
+.inicio-flex .fabs {
+  width: 200px;
+  height: 250px;
+  margin-right: 0;
+  margin-left: 0;
   padding-top: 3px;
+  position: relative;
+  z-index: -1;
+  text-align: center;
+  opacity: 80%;
+}
+.inicio-flex div {
+  position: relative;
+  margin-top: 190px;
+  margin-left: -200px;
+}
+.inicio-flex div .rabisco-1 {
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  text-align: center;
+  align-self: center;
+  color: #202020;
+}
+.inicio-flex h6 {
+  font-family: 'Arima Madurai', cursive;
+  font-size: 4rem;
+  text-align: right;
+  margin-left: 0;
+  position: relative;
+  z-index: -1;
+}
+.inicio-flex h5 {
+  font-size: 4rem;
+  text-align: left;
+  margin-right: 0;
+  position: relative;
+  z-index: -1;
+}
+.sobre-flex {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+.sobre-flex p {
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.sobre-flex .sobre-rabisco {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.sobre-flex .sobre-rabisco h6 {
+  font-size: 3rem;
+  text-align: left;
+}
+.sobre-flex .sobre-rabisco > img {
+  transform: scaleX(-1);
+  height: 180px;
+  width: 150px;
+  margin-top: -150px;
+  position: relative;
+  margin-right: 2rem;
+  color: #202020;
+}
+/*classe do conteúdo em skills - contato*/
+.conteudo-flex-tres-cols {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#skills h5 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+#skills .conteudo-flex-tres-cols {
+  justify-content: center;
+  gap: 7rem;
+}
+#skills .conteudo-flex-tres-cols ul {
+  list-style: none;
+}
+#skills .conteudo-flex-tres-cols ul li {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 1.3rem;
+  color: #202020;
+  margin-bottom: 0.8rem;
+}
+#skills .conteudo-flex-tres-cols #front {
+  text-align: right;
+  position: relative;
+  z-index: -1;
+}
+#skills .conteudo-flex-tres-cols #end {
+  text-align: left;
+}
+#skills .conteudo-flex-tres-cols img {
+  color: #202020;
+  width: 100px;
+  height: 110px;
+}
+#work .conteudo-flex-tres-cols h5 {
+  position: relative;
+  z-index: -1;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+#work .conteudo-flex-tres-cols #rabisco-4 {
+  margin-top: -5rem;
+  margin-right: -9rem;
+  position: relative;
+  text-align: center;
+  width: 200px;
+  height: 110px;
+  background-color: #f6f0cf;
+}
+#work .conteudo-flex-tres-cols a {
+  margin-top: 3rem;
+  font-family: 'Arima Madurai', cursive;
+}
+#work .conteudo-flex-tres-cols .titulo-projeto {
+  position: relative;
+}
+#work .conteudo-flex-tres-cols .titulo-projeto h3 {
+  font-family: 'Sarabun', sans-serif;
+  text-align: center;
+  margin-top: -50%;
+  background-color: #f6f0cf;
+}
+#work .conteudo-flex-tres-cols img {
+  width: 200px;
+  height: 200px;
+  opacity: 70%;
+  z-index: -1;
+  position: relative;
+  background-color: #B59E7B;
+}
+#contato h5 {
+  text-align: center;
+  margin-right: auto;
+  margin-left: 0;
+}
+#contato .conteudo-flex-tres-cols {
+  justify-content: center;
+  gap: 10rem;
+}
+#contato .conteudo-flex-tres-cols ul {
+  list-style: none;
+}
+#contato .conteudo-flex-tres-cols ul li {
+  margin: 0.5rem;
+  text-align: left;
+}
+#contato .conteudo-flex-tres-cols ul h3 {
+  font-family: 'Arima Madurai', cursive;
+  margin-bottom: 1rem;
+}
+#contato .conteudo-flex-tres-cols ul a {
+  display: inline-block;
+  color: #202020;
+  padding-bottom: 1rem;
+  margin-left: 1rem;
+}
+#contato .conteudo-flex-tres-cols ul img {
+  color: #202020;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: -0.5rem;
+}
+#contato img {
+  height: 150px;
+  width: 150px;
+  color: #202020;
+}
+#contato > div {
+  text-align: right;
+}
+#contato > div h3 {
+  font-family: 'Arima Madurai', cursive;
+}
+#contato > div form input,
+#contato > div form textarea {
+  font-family: 'Sarabun', sans-serif;
+  color: #202020;
+  background-color: #f6f0cf;
+  text-align: right;
+  resize: none;
+  border: none;
+  border-bottom: 1px #202020 solid;
+  border-right: 1px #202020 solid;
+  margin: 0.5rem;
+  padding: 0.5rem;
 }
 /*FOOTER rodapé*/
 footer {
