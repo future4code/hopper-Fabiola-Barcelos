@@ -10,28 +10,97 @@ const MainContainer = styled.div`
 `
 
 class App extends React.Component {
-  render() {
+ 
+  state = {
+    posts: [{
+      nomeUsuario: "huguinho",
+      fotoUsuario: 'https://picsum.photos/50/58',
+      fotoPost: "https://picsum.photos/200/150"
+    },
+    {
+      nomeUsuario: "zezinho",
+      fotoUsuario: 'https://picsum.photos/50/57',
+      fotoPost: "https://picsum.photos/200/120"
+    },
+    {
+      nomeUsuario: "luizinho",
+      fotoUsuario: 'https://picsum.photos/50/56',
+      fotoPost: "https://picsum.photos/200/140"
+    }
+    ],
+
+    novoNomeUsuario: " ",
+    novaFotoUsuario: "",
+    novaFotoPost: "",
+  }
+
+  publicaPost = () => {
+    // Colocamos em uma variavel o objeto que representa uma nova pessoa
+    const novoPost = {
+        
+      nomeUsuario: this.state.novoNomeUsuario,
+      fotoUsuario: this.state.novaFotoUsuario,
+      fotoPost: this.state.novaFotoPost
+    };
+
+    const novoPosts = [...this.state.posts, novoPost];
+
+    this.setState({ posts: novoPosts });
+    this.setState({ novoNomeUsuario: "", novaFotoUsuario: "", novaFotoPost: "" })
+  }
+
+  onChangeInputUsuario = (event) => {
+    this.setState({ novoNomeUsuario: event.target.value });
+  };
+
+  onChangeInputFotoUsuario = (event) => {
+    this.setState({ novaFotoUsuario: event.target.value });
+  };
+
+  onChangeInputFotoPost = (event) => {
+      this.setState({ novaFotoPost: event.target.value });
+    };
+
+
+render() {
+  const listaPosts = this.state.posts.map((post) => {
+    return (
+      <Post
+        nomeUsuario={post.nomeUsuario}
+        fotoUsuario={post.fotoUsuario}
+        fotoPost={post.fotoPost}
+      />
+    );
+  });
+
+
     return (
       <MainContainer>
-        <Post
-          nomeUsuario={'huguinho'}
-          fotoUsuario={'https://picsum.photos/50/58'}
-          fotoPost={'https://picsum.photos/200/150'}
+       <div>
+
+        <input
+            value={this.state.novoNomeUsuario}
+            onChange={this.onChangeInputUsuario}
+            placeholder={"Nome do usuário"}
+          />
+          
+        <input
+            value={this.state.novaFotoUsuario}
+            onChange={this.onChangeInputFotoUsuario}
+            placeholder={"Foto do usuário"}
+            
         />
+        
+        <input
+            value={this.state.novaFotoPost}
+            onChange={this.onChangeInputFotoPost}
+            placeholder={"Foto do post"}
+            
+          />
+          <button onClick={this.publicaPost}>Publicar</button>
 
-
-        <Post
-          nomeUsuario={'zezinho'}
-          fotoUsuario={'https://picsum.photos/50/51'}
-          fotoPost={'https://picsum.photos/200/151'}
-        />
-
-
-        <Post
-          nomeUsuario={'luizinho'}
-          fotoUsuario={'https://picsum.photos/50/52'}
-          fotoPost={'https://picsum.photos/200/152'}
-        />
+        </div>
+        {listaPosts}
 
 
       </MainContainer>
