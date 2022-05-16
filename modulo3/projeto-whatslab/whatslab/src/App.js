@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Mensagem from "./components/Mensagem";
 
  export class App extends React.Component {
    render() {
@@ -7,11 +8,11 @@ import styled from "styled-components";
      
      
      return (
-       <div>
+       <Mensagem/>
          
-      </div>
+      
     ) 
   } 
 }
 
-
+export default App;
