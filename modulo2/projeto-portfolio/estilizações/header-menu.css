@@ -1,0 +1,44 @@
+/*header _ nav _ ul-menu _a-li _ hr*/
+/*HEADER display flex*/
+header nav {
+  background-color: #f6f0cf;
+  top: 0;
+  width: 90%;
+  height: 10%;
+  position: fixed;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 0;
+  padding-top: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  z-index: 1;
+}
+/*HEADER menu*/
+header nav .menu {
+  width: 90%;
+  font-family: 'Arima Madurai', cursive;
+  font-size: 1.5rem;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+header nav ul a {
+  color: #202020;
+  text-decoration: none;
+  display: block;
+  padding: 9px 25px 8px 25px;
+}
+a:hover {
+  font-size: 110%;
+}
+/*
+a:active{
+ }
+*/
